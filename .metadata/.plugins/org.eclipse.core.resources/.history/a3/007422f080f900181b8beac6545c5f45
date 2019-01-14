@@ -1,0 +1,28 @@
+import java.io.IOException;
+
+import org.apache.http.client.ClientProtocolException;
+
+import com.google.gson.Gson;
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.WebResource;
+
+
+public class Principal {
+
+	public static void main(String[] args) throws ClientProtocolException, IOException {
+		
+		Client c = Client.create();
+	    WebResource wr = c.resource("http://services.groupkt.com/country/get/all");
+	    String json =  wr.get(String.class);
+	    
+	    Gson g = new Gson();
+	    
+	   
+	    
+	    System.out.println(json);
+	    
+	}
+}
+	
+
+

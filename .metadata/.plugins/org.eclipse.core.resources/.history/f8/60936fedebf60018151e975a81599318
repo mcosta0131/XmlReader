@@ -1,0 +1,58 @@
+package model;
+
+import java.math.BigDecimal;
+
+import javax.xml.bind.annotation.XmlElement;
+
+public class Staff {
+
+	private String firstName;
+	private String lastName;
+	private String nickName;
+	private BigDecimal salary;
+
+	public String getFirstName() {
+		return firstName;
+	}
+	
+	@XmlElement
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	@XmlElement
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getNickName() {
+		return nickName;
+	}
+	
+	@XmlElement
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+
+	public BigDecimal getSalary() {
+		return salary;
+	}
+	
+	@XmlElement
+	public void setSalary(BigDecimal salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Staff [firstName=" + firstName + ", lastName=" + lastName + ", nickName=" + nickName + ", salary="
+				+ salary + "]";
+	}
+	
+	
+
+}

@@ -1,0 +1,16 @@
+package model;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Company {
+	
+	private String firstName;
+	private String lastName;
+	private String nickName;
+	private Double salary;
+	
+	
+	
+
+}

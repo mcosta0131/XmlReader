@@ -1,0 +1,8 @@
+package model;
+
+public class ConsultarDetalhesPedidoResult {
+	
+	private boolean erro;
+	private boolean protocolo;
+
+}

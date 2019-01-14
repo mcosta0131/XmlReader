@@ -1,0 +1,17 @@
+package model;
+
+public class Body {
+
+	ConsultarDetalhesPedidoResponse consultarDetalhesPedidoResponse;
+
+	public ConsultarDetalhesPedidoResponse getConsultarDetalhesPedidoResponse() {
+		return consultarDetalhesPedidoResponse;
+	}
+
+	public void setConsultarDetalhesPedidoResponse(ConsultarDetalhesPedidoResponse consultarDetalhesPedidoResponse) {
+		this.consultarDetalhesPedidoResponse = consultarDetalhesPedidoResponse;
+	}
+	
+	
+	
+}

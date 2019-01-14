@@ -1,0 +1,17 @@
+package model;
+
+import javax.xml.bind.annotation.XmlElement;
+
+public class Body {
+	
+	@XmlElement
+	ConsultarDetalhesPedidoResponse consultarDetalhesPedidoResponse;
+
+	public ConsultarDetalhesPedidoResponse getConsultarDetalhesPedidoResponse() {
+		return consultarDetalhesPedidoResponse;
+	}
+
+	public void setConsultarDetalhesPedidoResponse(ConsultarDetalhesPedidoResponse consultarDetalhesPedidoResponse) {
+		this.consultarDetalhesPedidoResponse = consultarDetalhesPedidoResponse;
+	}
+}

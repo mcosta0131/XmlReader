@@ -1,0 +1,42 @@
+import java.io.IOException;
+
+import org.apache.http.client.ClientProtocolException;
+import org.json.JSONException;
+
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientHandlerException;
+import com.sun.jersey.api.client.UniformInterfaceException;
+import com.sun.jersey.api.client.WebResource;
+
+import model.RestResponse;
+
+
+public class Principal {
+
+	public static void main(String[] args) throws ClientProtocolException, IOException, UniformInterfaceException, ClientHandlerException, JSONException {
+		
+		Client c = Client.create();
+	    WebResource wr = c.resource("http://services.groupkt.com/country/get/all");
+	    String json =  wr.get(String.class);
+	    
+	    ObjectMapper objectMapper = new ObjectMapper();
+	    objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+	    RestResponse obj = objectMapper.readValue(json,RestResponse.class);
+	    
+	    System.out.println(obj);
+
+	    //	    Gson gson = new Gson();
+//	    
+//	    RestResponse response = gson.fromJson(json, RestResponse.class);
+//	    
+//	    System.out.println(response.getClass().getName());
+	    
+	     //System.out.println(json);
+	    // System.out.println(response);
+	}
+}
+	
+
+

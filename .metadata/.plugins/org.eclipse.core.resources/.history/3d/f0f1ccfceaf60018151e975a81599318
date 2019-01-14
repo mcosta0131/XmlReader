@@ -1,0 +1,13 @@
+package model;
+
+public class Staff {
+	
+	private String firstName;
+	private String lastName;
+	private String nickName;
+	private BigDecimal salary;
+	
+	
+	
+
+}

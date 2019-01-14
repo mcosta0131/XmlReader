@@ -1,0 +1,14 @@
+package model;
+
+public class Cidade {
+	
+	private String name;
+	private String alpha2_code;
+	private String alpha3_code;
+	
+	
+	
+	
+	
+	
+}

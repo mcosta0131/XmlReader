@@ -1,0 +1,10 @@
+package model;
+
+public class RestResponse {
+
+	private List<String> messages;
+	private List<Result> result;
+	
+	
+	
+}

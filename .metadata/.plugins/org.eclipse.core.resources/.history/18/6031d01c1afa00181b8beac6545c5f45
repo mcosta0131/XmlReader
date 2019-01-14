@@ -1,0 +1,17 @@
+package model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class ResponseAll {
+
+	@JsonProperty("RestResponse")
+	private RestResponse response;
+
+	public RestResponse getResponse() {
+		return response;
+	}
+
+	public void setResponse(RestResponse response) {
+		this.response = response;
+	}
+}

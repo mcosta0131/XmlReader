@@ -1,0 +1,39 @@
+import java.io.IOException;
+
+import org.apache.http.client.ClientProtocolException;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsonorg.JsonOrgModule;
+import com.google.gson.Gson;
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.WebResource;
+
+import model.RestResponse;
+
+
+public class Principal {
+
+	public static void main(String[] args) throws ClientProtocolException, IOException {
+		
+		Client c = Client.create();
+	    WebResource wr = c.resource("http://services.groupkt.com/country/get/all");
+	    String json =  wr.get(String.class);
+	    JSONObject obj = new JSONObject(wr.get(String.class));
+	    
+	    ObjectMapper mapper = new ObjectMapper().registerModule(new JsonOrgModule());
+	    RestResponse data = mapper.convertValue(obj, RestResponse.class);
+	    
+	    
+	    Gson gson = new Gson();
+	    
+	    RestResponse response = gson.fromJson(json, RestResponse.class);
+	    
+	    System.out.println(response.getClass().getName());
+	    
+	     //System.out.println(json);
+	    // System.out.println(response);
+	}
+}
+	
+
+

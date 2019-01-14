@@ -1,0 +1,43 @@
+import java.io.IOException;
+
+import org.apache.http.client.ClientProtocolException;
+import org.json.JSONException;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.ClientHandlerException;
+import com.sun.jersey.api.client.ClientResponse;
+import com.sun.jersey.api.client.UniformInterfaceException;
+import com.sun.jersey.api.client.WebResource;
+
+import model.ResponseAll;
+
+
+public class Principal {
+
+	public static void main(String[] args) throws ClientProtocolException, IOException, UniformInterfaceException, ClientHandlerException, JSONException {
+		
+		Client c = Client.create();
+	    WebResource wr = c.resource("http://services.groupkt.com/country/get/all");
+	    String json =  wr.get(String.class);
+	    
+	    WebResource responseMsg = wr.path("http://services.groupkt.com/country/get/all");
+	    
+	    
+	    //	    ClientResponse responseMsg = webResource.path("/v1/test/receiveListOfStrings")
+		//	            .queryParam("list", "one")
+		//	            .queryParam("list", "two")
+		//	            .queryParam("list", "three")
+		//	            .get(ClientResponse.class);
+	    
+	    ObjectMapper objectMapper = new ObjectMapper();
+	    ResponseAll obj = objectMapper.readValue(json,ResponseAll.class);
+	    
+	    System.out.println(obj.toString());
+	    
+	    System.exit(0);
+	}
+}
+	
+
+

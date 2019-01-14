@@ -1,0 +1,9 @@
+package model;
+
+
+@XmlRootElement
+public class Company {
+	
+	
+
+}

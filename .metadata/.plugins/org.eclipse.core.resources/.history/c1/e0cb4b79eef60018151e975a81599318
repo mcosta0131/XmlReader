@@ -1,0 +1,24 @@
+package model;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Company {
+
+	private List <Staff> staff;
+
+	public Staff getStaff() {
+		return staff;
+	}
+	
+	@XmlElement
+	public void setStaff(Staff staff) {
+		this.staff = staff;
+	}
+
+	@Override
+	public String toString() {
+		return "Company [staff=" + staff + "]";
+	}
+}

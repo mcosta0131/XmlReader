@@ -1,0 +1,23 @@
+package model;
+
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"")
+public class Envelope {
+	
+	Body body;
+
+	public Body getBody() {
+		return body;
+	}
+	
+	
+	@XmlElement
+	public void setBody(Body body) {
+		this.body = body;
+	}
+	
+	
+
+}

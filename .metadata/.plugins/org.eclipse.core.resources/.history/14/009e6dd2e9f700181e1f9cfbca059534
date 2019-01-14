@@ -1,0 +1,29 @@
+import java.io.File;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
+
+import model.Envelope;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+		 /*try {
+
+				File file = new File("C:\\Desenvolvimento-Exemplos\\other\\xmlReader\\teste.xml");
+				
+				
+				JAXBContext jaxbContext = JAXBContext.newInstance(Envelope.class);
+
+				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+				Envelope envelope = (Envelope) jaxbUnmarshaller.unmarshal(file);
+				System.out.println(envelope);
+
+			  } catch (JAXBException e) {
+				e.printStackTrace();
+			  }*/
+
+			}
+	
+}

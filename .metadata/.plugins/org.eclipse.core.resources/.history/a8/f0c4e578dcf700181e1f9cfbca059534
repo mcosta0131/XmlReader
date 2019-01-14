@@ -1,0 +1,20 @@
+package model;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class Body {
+	
+	private ConsultarDetalhesPedidoResponse consutaResponse;
+
+	public ConsultarDetalhesPedidoResponse getConsutaResponse() {
+		return consutaResponse;
+	}
+
+	public void setConsutaResponse(ConsultarDetalhesPedidoResponse consutaResponse) {
+		this.consutaResponse = consutaResponse;
+	}
+
+	
+	
+}

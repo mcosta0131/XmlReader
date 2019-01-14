@@ -1,0 +1,28 @@
+package model;
+
+public class ConsultarDetalhesPedidoResult {
+	
+	private boolean erro;
+	private boolean protocolo;
+	
+	
+	public boolean isErro() {
+		return erro;
+	}
+	
+	public void setErro(boolean erro) {
+		this.erro = erro;
+	}
+	
+	public boolean isProtocolo() {
+		return protocolo;
+	}
+	
+	public void setProtocolo(boolean protocolo) {
+		this.protocolo = protocolo;
+	}
+	
+	
+	
+
+}

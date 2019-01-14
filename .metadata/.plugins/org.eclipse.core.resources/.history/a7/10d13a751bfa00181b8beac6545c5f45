@@ -1,0 +1,37 @@
+package model;
+
+import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Result implements Serializable {
+
+	private static final long serialVersionUID = -6099590649910535125L;
+
+	@JsonProperty("name")
+	private String name;
+
+	@JsonProperty("alpha2_code")
+	private String alpha2Code;
+
+	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAlpha2Code() {
+		return alpha2Code;
+	}
+
+	public void setAlpha2Code(String alpha2Code) {
+		this.alpha2Code = alpha2Code;
+	}
+
+	
+	
+}
